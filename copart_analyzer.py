@@ -557,7 +557,5 @@ def run_scheduled():
 if __name__ == "__main__":
     if "--schedule" in sys.argv:
         run_scheduled()
-    elif "--quick" in sys.argv:
-        run(quick=True)
     else:
         run(quick=False)
