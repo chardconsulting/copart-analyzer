@@ -1,1 +1,1 @@
-worker: python copart_analyzer.py --schedule
+worker: python copart_analyzer.py 
