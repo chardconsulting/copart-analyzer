@@ -1,0 +1,6 @@
+apify-client
+anthropic
+requests
+schedule
+gspread
+google-auth
