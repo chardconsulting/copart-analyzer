@@ -33,11 +33,12 @@ GOOGLE_CREDS_JSON  = os.getenv("GOOGLE_CREDS_JSON",  "")
 
 # GA Copart yards: Atlanta South (855), Atlanta North (146), Savannah (187), Tifton (191)
 COPART_SEARCH_URL = (
-    "https://www.copart.com/lotSearchResults/?free=true&query=&"
+    "https://www.copart.com/lotSearchResults?free=false&"
     "searchCriteria=%7B%22query%22:%5B%22*%22%5D,%22filter%22:%7B"
-    "%22TITL%22:%5B%22title_group_code:TITLEGROUP_C%22%5D,"
     "%22LCAT%22:%5B%22lot_cond_code:RUNNDRIVE%22%5D,"
-    "%22YARD%22:%5B%22location:855%22,%22location:146%22,%22location:187%22,%22location:191%22%5D%7D%7D"
+    "%22TITL%22:%5B%22title_group_code:TITLEGROUP_C%22%5D,"
+    "%22LOC%22:%5B%22yard_name:%5C%22GA%20-%20ATLANTA%20SOUTH%5C%22%22,"
+    "%22yard_name:%5C%22GA%20-%20ATLANTA%20NORTH%5C%22%22%5D%7D%7D"
 )
 
 FB_LOCATION      = "Atlanta, Georgia"
