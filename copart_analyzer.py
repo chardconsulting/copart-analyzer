@@ -548,6 +548,7 @@ def run(quick=False):
 
 def run_scheduled():
     print("📅 Scheduler active — Full run 7:00 AM | Quick run 12:00 PM (ET)")
+    run(quick=False)  # Run immediately on startup
     schedule.every().day.at("07:00").do(run, quick=False)
     schedule.every().day.at("12:00").do(run, quick=True)
     while True:
