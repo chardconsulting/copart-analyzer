@@ -213,7 +213,8 @@ def fetch_copart_lots():
     print("🔍 Fetching Copart lots via Apify...")
     client = ApifyClient(APIFY_API_KEY)
     run    = client.actor("parseforge/copart-public-search-scraper").call(
-        run_input={"startUrl": COPART_SEARCH_URL, "maxItems": MAX_ITEMS}
+        run_input={"startUrl": COPART_SEARCH_URL, "maxItems": MAX_ITEMS},
+        memory_mbytes=1024
     )
     items = list(client.dataset(run["defaultDatasetId"]).iterate_items())
     print(f"✅ Fetched {len(items)} lots")
