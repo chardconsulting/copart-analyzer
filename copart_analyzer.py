@@ -32,14 +32,7 @@ GOOGLE_SHEET_ID    = os.getenv("GOOGLE_SHEET_ID",    "YOUR_SHEET_ID_HERE")
 GOOGLE_CREDS_JSON  = os.getenv("GOOGLE_CREDS_JSON",  "")
 
 # GA Copart yards: Atlanta South (855), Atlanta North (146), Savannah (187), Tifton (191)
-COPART_SEARCH_URL = (
-    "https://www.copart.com/lotSearchResults?free=false&"
-    "searchCriteria=%7B%22query%22:%5B%22*%22%5D,%22filter%22:%7B"
-    "%22LCAT%22:%5B%22lot_cond_code:RUNNDRIVE%22%5D,"
-    "%22TITL%22:%5B%22title_group_code:TITLEGROUP_C%22%5D,"
-    "%22LOC%22:%5B%22yard_name:%5C%22GA%20-%20ATLANTA%20SOUTH%5C%22%22,"
-    "%22yard_name:%5C%22GA%20-%20ATLANTA%20NORTH%5C%22%22%5D%7D%7D"
-)
+COPART_SEARCH_URL = "https://www.copart.com/lotSearchResults?free=false&searchCriteria=%7B%22query%22:%5B%22*%22%5D,%22filter%22:%7B%22ODM%22:%5B%22odometer_reading_received:%5B0%20TO%209999999%5D%22%5D,%22YEAR%22:%5B%22lot_year:%5B2016%20TO%202027%5D%22%5D,%22LOC%22:%5B%22yard_name:%5C%22GA%20-%20ATLANTA%20SOUTH%5C%22%22%5D,%22MISC%22:%5B%22%23VehicleTypeCode:VEHTYPE_V%22%5D%7D%7D"
 
 FB_LOCATION      = "Atlanta, Georgia"
 FB_MAX_PRICE     = 30000
