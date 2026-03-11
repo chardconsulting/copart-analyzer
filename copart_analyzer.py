@@ -201,7 +201,7 @@ def filter_lots(lots):
         acv = lot.get("estimated_retail_value", 0) or 0
         if acv <= 0:
             continue
-        if (acv - bid - COPART_BUYER_FEE - 2000) / acv * 100 < MIN_MARGIN_PCT:
+        if (acv - bid - COPART_BUYER_FEE) / acv * 100 < MIN_MARGIN_PCT:
             continue
         if has_check_engine_light(lot):
             lot["_cel_detected"] = True
