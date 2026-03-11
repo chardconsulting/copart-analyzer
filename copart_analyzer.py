@@ -245,7 +245,7 @@ LOT:
 Vehicle: {lot.get('year')} {lot.get('make')} {lot.get('model')} {lot.get('trim','')}
 Lot #: {lot.get('lot_number')} | Odo: {lot.get('odometer')} | Color: {lot.get('color')}
 Current Bid: ${lot.get('current_bid',0):,} | ACV (Copart estimate): ${acv:,}
-Damage: {lot.get('primary_damage')} | Title: {lot.get('doc_type')}
+Damage: {lot.get('primary_damage')} | Title: {lot.get('title_group_description') or lot.get('title_type') or 'Unknown'}
 Buyer Fee: ${COPART_BUYER_FEE:,}
 Damage Report: {damage_str}
 
