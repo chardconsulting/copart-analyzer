@@ -199,7 +199,7 @@ def filter_lots(lots):
         odo = parse_odometer(lot.get("odometer", ""))
         bid = lot.get("current_bid", 0) or 0
         acv = lot.get("estimated_retail_value", 0) or 0
-        if odo > MAX_MILEAGE or acv <= 0:
+        if acv <= 0:
             continue
         if (acv - bid - COPART_BUYER_FEE - 2000) / acv * 100 < MIN_MARGIN_PCT:
             continue
